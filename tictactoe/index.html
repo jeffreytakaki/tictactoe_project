@@ -5,14 +5,15 @@
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
 <script src="script.js"></script>
 <link rel = "stylesheet" href="style.css">
+<link rel="stylesheet" href="animate.min.css">
 
 </head>
 <h1>TIC // TAC // TOE</h1>
 <body x-ng-app="" x-ng-controller="tttController">
 
 	<div class ="container">
-		<div x-ng-class="{cells: true, clickChangeX: b == 'X',clickChangeO: b =='O'}" x-ng-class-click=" 'clickChange' " x-ng-repeat="b in board track by $index" x-ng-click=clicker($index)> {{ b }} </div>
-
+		<div class="cells" x-ng-class="{cells: true, clickChangeX: b == 'X',clickChangeO: b =='O'}" x-ng-class-click=" 'clickChange' " x-ng-repeat="b in board track by $index" x-ng-click=clicker($index)> {{ b }} </div>
+		<div x-ng-class="results"></div>
 	</div>
 
 </body>

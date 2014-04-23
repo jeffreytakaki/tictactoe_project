@@ -3,8 +3,6 @@ function tttController($scope) {
 
 	var clickedspaces = 0;
 
-
-
 	var checkWin = function() {
 	var win = false;
 		if ($scope.board[0] == $scope.board[1] && $scope.board[2]==$scope.board[1] && $scope.board[1]!==" "){
