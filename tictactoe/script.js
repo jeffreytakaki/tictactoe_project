@@ -1,40 +1,82 @@
 function tttController($scope) {
 	$scope.board = [" "," "," "," "," "," "," "," "," "]
 
-	var checkWin = function() {
+	var clickedspaces = 0;
 
-	if ($scope.board[0] == $scope.board[1] && $scope.board[2]==$scope.board[1] && $scope.board[1]!==" "){
-		alert("someone won")
-		//reset button here?
-	}
-	if ($scope.board[3] == $scope.board[4] && $scope.board[5]==$scope.board[4] && $scope.board[5]!==" "){
-		alert("someone won")
-	}
-	if ($scope.board[6] == $scope.board[7] && $scope.board[8]==$scope.board[7] && $scope.board[8]!==" "){
-		alert("someone won")
-	}
-	if ($scope.board[0] == $scope.board[3] && $scope.board[6]==$scope.board[3] && $scope.board[6]!==" "){
-		alert("someone won")
-	}
-	if ($scope.board[1] == $scope.board[4] && $scope.board[7]==$scope.board[4] && $scope.board[7]!==" "){
-		alert("someone won")
-	}
-	if ($scope.board[2] == $scope.board[5] && $scope.board[8]==$scope.board[5] && $scope.board[8]!==" "){
-		alert("someone won")
-	}
-	if ($scope.board[0] == $scope.board[4] && $scope.board[8]==$scope.board[4] && $scope.board[8]!==" "){
-		alert("someone won")		
-	}
-	if ($scope.board[2] == $scope.board[4] && $scope.board[6]==$scope.board[4] && $scope.board[6]!==" "){
-		alert("someone won")
-	}	else if(clickedspaces === 9) {
-		alert("Draw!");}
+
+
+	var checkWin = function() {
+	var win = false;
+		if ($scope.board[0] == $scope.board[1] && $scope.board[2]==$scope.board[1] && $scope.board[1]!==" "){
+			win = true;
+			if ($scope.board[0] == 'X') {
+				alert("X wins!");
+			} else {
+				alert("O wins!");
+			}
+			//reset button here?
+		}
+		if ($scope.board[3] == $scope.board[4] && $scope.board[5]==$scope.board[4] && $scope.board[5]!==" "){
+			win = true;
+			if ($scope.board[3] == 'X') {
+				alert("X wins!");
+			} else {
+				alert("O wins!");
+			}
+
+		}
+		if ($scope.board[6] == $scope.board[7] && $scope.board[8]==$scope.board[7] && $scope.board[8]!==" "){
+			win = true;
+			if ($scope.board[6] == 'X') {
+				alert("X wins!");
+			} else {
+				alert("O wins!");
+			}
+		}
+		if ($scope.board[0] == $scope.board[3] && $scope.board[6]==$scope.board[3] && $scope.board[6]!==" "){
+			win = true;
+			if ($scope.board[0] == 'X') {
+				alert("X wins!");
+			} else {
+				alert("O wins!");
+			}
+		}
+		if ($scope.board[1] == $scope.board[4] && $scope.board[7]==$scope.board[4] && $scope.board[7]!==" "){
+			win = true;
+			if ($scope.board[1] == 'X') {
+				alert("X wins!");
+			} else {
+				alert("O wins!");
+			}
+		}
+		if ($scope.board[2] == $scope.board[5] && $scope.board[8]==$scope.board[5] && $scope.board[8]!==" "){
+			win = true;
+			if ($scope.board[2] == 'X') {
+				alert("X wins!");
+			} else {
+				alert("O wins!");
+			}
+		}
+		if ($scope.board[0] == $scope.board[4] && $scope.board[8]==$scope.board[4] && $scope.board[8]!==" "){
+			win = true;
+			if ($scope.board[0] == 'X') {
+				alert("X wins!");
+			} else {
+				alert("O wins!");
+			}		
+		}
+		if ($scope.board[2] == $scope.board[4] && $scope.board[6]==$scope.board[4] && $scope.board[6]!==" "){
+			win = true;
+			if ($scope.board[2] == 'X') {
+				alert("X wins!");
+			} else {
+				alert("O wins!");
+			}
+		}	else if (clickedspaces === 9 && !win) {
+			alert("Draw!");}
 }
 	
 
-
-
-	var clickedspaces = 0;
 
 	$scope.clicker = function(cellindex) {
 		
@@ -45,6 +87,7 @@ function tttController($scope) {
 				$scope.board.push[cellindex];
 				console.log($scope.board);
 				checkWin();
+				
 
 			} else {
 				$scope.board[cellindex] = 'X';
@@ -59,7 +102,8 @@ function tttController($scope) {
 };
 
 
-
+			function reset() {
+				location.reload()};
 
 
 
