@@ -118,7 +118,7 @@ function tttController($scope) {
 				checkWin();
 			} 
 		} else {
-			alert("choose another box!");
+	
 			}
 	}	
 

@@ -43,7 +43,7 @@ background: linear-gradient(#0b61a4, #acd5f2); /* Standard syntax */
 h1 {
 font-family: 'Roboto', 'sans-serif';
 text-align: center;
-font-size: 100px;
+font-size: 90px;
 color: white;
 margin-top: 25px;
 }
@@ -51,7 +51,6 @@ margin-top: 25px;
 .scoreboard {
   width: 300px;
   height: 200px;
-  border: 4px dotted gray;
   margin: 0 auto;
 }
 
@@ -83,6 +82,21 @@ margin-top: 25px;
   background-color: rgba(0,0,0,0);
 
 }
+
+.button {
+  width: 40px;
+  height: 60px;
+}
+
+ul li {
+  display: inline-block;
+  font-size: 80px;
+  padding: 0 30px 0 0;
+  color: white;
+}
+
+
+
 
 
 

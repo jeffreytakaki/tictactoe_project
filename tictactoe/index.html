@@ -6,26 +6,33 @@
 <script src="script.js"></script>
 <link rel = "stylesheet" href="style.css">
 <link rel="stylesheet" href="animate.min.css">
-
+<link rel="stylesheet" href="hover.css">
 </head>
 <h1>TIC // TAC // TOE</h1>
 <body x-ng-app="" x-ng-controller="tttController">
 
 	<div class = "wrapper"
 		<div class ="container">
-			<div class="cells" x-ng-class="{cells: true, clickChangeX: b == 'X',clickChangeO: b =='O'}" x-ng-class-click=" 'clickChange' " x-ng-repeat="b in board track by $index" x-ng-click=clicker($index)> {{ b }} </div>
+			<div class="cells float-shadow" x-ng-class="{cells: true, clickChangeX: b == 'X',clickChangeO: b =='O'}" x-ng-class-click=" 'clickChange' " x-ng-repeat="b in board track by $index" x-ng-click=clicker($index)> {{ b }} </div>
 			<!-- <button x-ng-click="board = initial">Reset to initial value</button> -->
-			<button x-ng-click="reset()">Play again</button>
+			<button style="width:80px; height: 60px;"x-ng-click="reset()">Play again</button>
 		</div>
 
 		<div class="scoreboard">
-			<div class="scoreX">
+			<ul>
+				<li x-ng-bind="counterX"></li>
+				<li>//</li>
+				<li x-ng-bind="counterO"></li>
+			</ul>
+
+
+			<!-- <div class="scoreX">
 				<p x-ng-bind="counterX"></p>
 			</div>	
 
 			<div class="scoreO">
 				<p x-ng-bind="counterO"></p>
-			</div>	
+			</div>	 -->
 		</div>
 	
 
