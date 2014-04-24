@@ -17,14 +17,22 @@
 			<!-- <button x-ng-click="board = initial">Reset to initial value</button> -->
 			<button x-ng-click="reset()">Play again</button>
 		</div>
-		<div class="scoreX"></div>
-			<p x-ng-bind="counterX"></p>
 
-		<div class="scoreO"></div>
-			<p x-ng-bind="counterO"></p>
+		<div class="scoreboard">
+			<div class="scoreX">
+				<p x-ng-bind="counterX"></p>
+			</div>	
+
+			<div class="scoreO">
+				<p x-ng-bind="counterO"></p>
+			</div>	
+		</div>
 	
 
-		<!-- <div class="displayArea"></div> -->
+		<div class="displayArea">
+			<p id="win">
+		</div>
+
 	</div>	
 
 

@@ -5,13 +5,14 @@ function tttController($scope) {
 
 	$scope.counterX=0;
 	$scope.counterO=0;
-	
+	var win = false;
+
 
 	var checkWin = function() {
 		console.log($scope.counterX);
 		console.log($scope.counterO);
 		
-		var win = false;
+		
 		
 		if ($scope.board[0] == $scope.board[1] && $scope.board[2]==$scope.board[1] && $scope.board[1]!==" "){
 			win = true;
@@ -101,7 +102,7 @@ function tttController($scope) {
 
 	$scope.clicker = function(cellindex) {
 		
-		if($scope.board[cellindex] === " ") {
+		if($scope.board[cellindex] === " " && !win) {
 			clickedspaces++;
 	  		if (clickedspaces % 2 == 0) { 
 				$scope.board[cellindex] = 'O';
@@ -135,6 +136,7 @@ function tttController($scope) {
 		// $scope.board = $scope.initial;		
 		$scope.board = [" "," "," "," "," "," "," "," "," "];
 		clickedspaces = 0;
+		win = false;
 		};	
 
 };  //end controller bracket
