@@ -22,7 +22,11 @@ background: -moz-linear-gradient(#0b61a4, #acd5f2); /* For Firefox 3.6 to 15 */
 background: linear-gradient(#0b61a4, #acd5f2); /* Standard syntax */
 }
 
+.wrapper {
+	width: 600px;
+	margin: 0 auto;
 
+}
 .container {
 	width: 500px;
 	margin: -40px auto;
@@ -43,6 +47,34 @@ font-size: 100px;
 color: white;
 margin-top: 25px;
 }
+
+.scoreX {
+	height: 100px;
+	width: 75px;
+	float:left;
+	background-color:rgba(73,74,74,0);
+	margin: -600px;
+	margin-top: -230px;
+
+}
+
+.scoreO {
+	height: 300px;
+	width: 75px;
+	float:right;
+	background-color:rgba(73,74,74,0);
+	margin: 410px;
+	margin-top: -385px;
+}
+
+.displayArea {
+  height: 300px;
+  width: 50%;
+  background-color: white;
+
+}
+
+
 
 @-webkit-keyframes bounceInDown {
   0% {
